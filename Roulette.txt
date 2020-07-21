@@ -19,8 +19,8 @@ int main (void) {
 
   creditos = 100 ;
 
-  printf("Hey, bem-vindo à ROLETA.\n");
-  printf("Os seus créditos: 100$\n");
+  printf("Hey, bem-vindo Ã  ROLETA.\n");
+  printf("Os seus crÃ©ditos: 100$\n");
 
   while(creditos > 0) {
     escolha = 0;
@@ -29,14 +29,14 @@ int main (void) {
       printf("Escolha o modo de jogo: \n");
       printf("1-Impar/Par\n");
       printf("ou\n");
-      printf("2-Número específico\n");
+      printf("2-NÃºmero especÃ­fico\n");
       scanf("%d", &escolha);
 
     }
       printf("Quanto quer apostar?\n");
       scanf("%d", &aposta);
       if(aposta > creditos) {
-        printf("Não tem créditos suficientes, faça uma aposta válida.\nOs seus créditos são: %d$\n",creditos);
+        printf("NÃ£o tem crÃ©ditos suficientes, faÃ§a uma aposta vÃ¡lida.\nOs seus crÃ©ditos sÃ£o: %d$\n",creditos);
         scanf("%d", &aposta);
       }
       
@@ -47,7 +47,7 @@ int main (void) {
       printf("Aposta nos 1-Impares ou 2-Pares?\n");
       scanf("%d", &impar_par);
       if (impar_par == 1){
-        printf("Você escolheu: Impares\n");
+        printf("VocÃª escolheu: Impares\n");
         calhou = random_number(); 
         for(int i = 5; i > -1; i--){
           sleep(1);
@@ -55,42 +55,42 @@ int main (void) {
         } 
         printf("Calhou: %d\n", calhou);   
         if (calhou %2 != 0){ 
-          printf("Parabéns, acertou!\n");      
+          printf("ParabÃ©ns, acertou!\n");      
           premio = aposta *2;
           printf ("Ganhou:""%d$\n",premio);
           creditos += premio;
-          printf ("Quer jogar novamente? Sim(s) ou Não(n)\n ");
+          printf ("Quer jogar novamente? Sim(s) ou NÃ£o(n)\n ");
           scanf("%s", jogar_denovo);
           if (strcmp(jogar_denovo,"n") == 0) {
           break;
           }
           while (strcmp(jogar_denovo,"s") != 0) {
-          printf("Por favor responda apropriadamente à pergunta.\n");
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Por favor responda apropriadamente Ã  pergunta.\n");
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           scanf("%s", jogar_denovo);
         }
         }
         else {
           printf("Perdeu.\n"); 
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           if (creditos == 0) {
-            printf("Ficou sem créditos.\n");
+            printf("Ficou sem crÃ©ditos.\n");
           break;
           }
-          printf ("Quer jogar novamente? Sim(s) ou Não(n)\n ");
+          printf ("Quer jogar novamente? Sim(s) ou NÃ£o(n)\n ");
           scanf("%s", jogar_denovo);
           if (strcmp(jogar_denovo,"n") == 0) {
           break;
           }
           while (strcmp(jogar_denovo,"s") != 0) {
-          printf("Por favor responda apropriadamente à pergunta.\n");
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Por favor responda apropriadamente Ã  pergunta.\n");
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           scanf("%s", jogar_denovo);
         }
         }
       }
       else {
-        printf("Você escolheu: Par\n");
+        printf("VocÃª escolheu: Par\n");
         calhou = random_number();  
 
         for(int i = 5; i > -1; i--){
@@ -100,43 +100,43 @@ int main (void) {
 
         printf("Calhou: %d\n", calhou);
         if (calhou %2 == 0){
-          printf("Parabéns! Você acertou!\n");
+          printf("ParabÃ©ns! VocÃª acertou!\n");
           premio = aposta *2;
           printf ("Ganhou:""%d$\n",premio); 
           creditos += premio; 
-          printf ("Quer jogar novamente? Sim(s) ou Não(n)\n ");
+          printf ("Quer jogar novamente? Sim(s) ou NÃ£o(n)\n ");
           scanf("%s", jogar_denovo);
           if (strcmp(jogar_denovo,"n") == 0) {
           break;
           }
           while (strcmp(jogar_denovo,"s") != 0) {
-          printf("Por favor responda apropriadamente à pergunta.\n");
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Por favor responda apropriadamente Ã  pergunta.\n");
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           scanf("%s", jogar_denovo);
         }  
         }
         else {
           printf("Perdeu.\n"); 
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           if (creditos == 0) {
-            printf("Ficou sem créditos.\n");
+            printf("Ficou sem crÃ©ditos.\n");
           break;
           }
-          printf ("Quer jogar novamente? Sim(s) ou Não(n)\n ");
+          printf ("Quer jogar novamente? Sim(s) ou NÃ£o(n)\n ");
           scanf("%s", jogar_denovo);
           if (strcmp(jogar_denovo,"n") == 0) {
           break;
           }
           while (strcmp(jogar_denovo,"s") != 0) {
-          printf("Por favor responda apropriadamente à pergunta.\n");
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Por favor responda apropriadamente Ã  pergunta.\n");
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           scanf("%s", jogar_denovo);
         }
         }
       }     
     }  
     if (escolha == 2) {
-      printf("Entre 1 e 35, em que número aposta?\n");
+      printf("Entre 1 e 35, em que nÃºmero aposta?\n");
       scanf("%d",&numero_escolhido);
       calhou = random_number();
       for(int i = 5; i > -1; i--){
@@ -149,33 +149,33 @@ int main (void) {
         premio = aposta *35;
         printf ("Ganhou:""%d$\n",premio);
         creditos += premio;
-        printf("Os seus créditos: %d$\n",creditos);
-        printf ("Quer jogar novamente? Sim(s) ou Não(n)\n ");
+        printf("Os seus crÃ©ditos: %d$\n",creditos);
+        printf ("Quer jogar novamente? Sim(s) ou NÃ£o(n)\n ");
         if (strcmp(jogar_denovo,"n") == 0) {
         break;
         }
         while (strcmp(jogar_denovo,"s") != 0) {
-          printf("Por favor responda apropriadamente à pergunta.\n");
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Por favor responda apropriadamente Ã  pergunta.\n");
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           scanf("%s", jogar_denovo);
         }
       }
       else {
         printf("Perdeu.\n");
-        printf("Os seus créditos: %d$\n",creditos);
+        printf("Os seus crÃ©ditos: %d$\n",creditos);
         if (creditos == 0) {
-            printf("Ficou sem créditos.\n");
+            printf("Ficou sem crÃ©ditos.\n");
           break;
           }
         if (creditos > 0) {
-        printf("Quer jogar novamente? Sim(s) ou Não(n)\n");
+        printf("Quer jogar novamente? Sim(s) ou NÃ£o(n)\n");
         scanf("%s", jogar_denovo);
         if (strcmp(jogar_denovo,"n") == 0) {
           break;
         }
         while (strcmp(jogar_denovo,"s") != 0) {
-          printf("Por favor responda apropriadamente à pergunta.\n");
-          printf("Os seus créditos: %d$\n",creditos);
+          printf("Por favor responda apropriadamente Ã  pergunta.\n");
+          printf("Os seus crÃ©ditos: %d$\n",creditos);
           scanf("%s", jogar_denovo);
           break;
         }
